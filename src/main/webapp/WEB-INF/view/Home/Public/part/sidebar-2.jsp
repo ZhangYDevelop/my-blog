@@ -32,24 +32,24 @@
                         <a title="微信" id="weixin_btn" rel="external nofollow">
                             <i class="fa fa-weixin"> </i>
                             <div id="weixin_code" class="hide" >
-                                <img src="${options.optionAboutsiteWechat}" alt="">
+                                <img style="height: 430px;width: 430px;" src="${options.optionAboutsiteWechat}" alt="">
                             </div>
                         </a>
                     </li>
-                    <li class="tqq">
-                        <a target="blank" rel="external nofollow"
-                           href="http://wpa.qq.com/msgrd?V=3&amp;uin=${options.optionAboutsiteQq}&amp;Site=QQ&amp;Menu=yes"
-                           title="QQ在线">
-                            <i class="fa fa-qq"></i>
-                        </a>
-                    </li>
-                    <li class="tsina">
-                        <a title=""
-                           href="http://weibo.com/${options.optionAboutsiteWeibo}"
-                           target="_blank" rel="external nofollow">
-                            <i class="fa fa-weibo"></i>
-                        </a>
-                    </li>
+                    <%--<li class="tqq">--%>
+                        <%--<a target="blank" rel="external nofollow"--%>
+                           <%--href="http://wpa.qq.com/msgrd?V=3&amp;uin=${options.optionAboutsiteQq}&amp;Site=QQ&amp;Menu=yes"--%>
+                           <%--title="QQ在线">--%>
+                            <%--<i class="fa fa-qq"></i>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="tsina">--%>
+                        <%--<a title=""--%>
+                           <%--href="http://weibo.com/${options.optionAboutsiteWeibo}"--%>
+                           <%--target="_blank" rel="external nofollow">--%>
+                            <%--<i class="fa fa-weibo"></i>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
                     <li class="feed">
                         <a title="" href="https://github.com/${options.optionAboutsiteGithub}" target="_blank"
                            rel="external nofollow">

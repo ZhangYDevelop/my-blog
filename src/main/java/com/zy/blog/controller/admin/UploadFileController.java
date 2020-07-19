@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Calendar;
 
 /**
@@ -22,7 +24,7 @@ public class UploadFileController {
     /**
      * 文件保存目录，物理路径
      */
-    public final String rootPath = "/zyspace/upload/blog/";
+    public  String rootPath = "resource/assets/uploads/";
 
     public final String allowSuffix = ".bmp.jpg.jpeg.png.gif.pdf.doc.zip.rar.gz";
 
@@ -34,7 +36,11 @@ public class UploadFileController {
      * @throws IOException
      */
     @RequestMapping(value = "/img", method = RequestMethod.POST)
-    public JsonResult uploadFile(@RequestParam("file") MultipartFile file) {
+    public JsonResult uploadFile(@RequestParam("file") MultipartFile file, HttpServletRequest request) {
+
+
+        // "/Users/zhangy/Documents/apache-tomcat-8.5.39/webapps/ROOT/"
+        rootPath = request.getSession().getServletContext().getRealPath("/") + rootPath;
 
         //1.文件后缀过滤，只允许部分后缀
         //文件的完整名称,如spring.jpeg
